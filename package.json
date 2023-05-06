@@ -1,14 +1,14 @@
 {
   "name": "typeblock",
-  "version": "1.0.0",
+  "version": "0.4.5",
   "description": "To create own typing practice application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server",
     "open": "open http://localhost:9000",
-    "dev": "npm run build && npm run start",
+    "dev": "npm run build && webpack-dev-server --mode development",
     "format": "prettier write **/*.js"
   },
   "keywords": [

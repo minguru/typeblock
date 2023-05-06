@@ -1,11 +1,11 @@
 import '../css/root.scss'
+import '../css/load.scss'
 import '../css/common.scss'
 import '../css/fonts.scss'
-import '../css/page.anim.scss'
-import '../css/page.common.scss'
-import '../css/page.keyboard.scss'
-import '../css/page.mcmode.scss'
-import '../css/page.typebox.scss'
+import '../css/ui.scss'
+import '../css/anim.scss'
+import '../css/keyboard.scss'
+import '../css/mcmode.scss'
 import './main'
 
 window.addEventListener("DOMContentLoaded", () => {

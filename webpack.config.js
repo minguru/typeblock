@@ -16,19 +16,19 @@ module.exports = {
       directory: path.resolve(__dirname, '')
     },
     compress: true,
-    port: 9000,
-    hot: true
+    hot: true,
+    port: 9000
   },
   module: {
     rules: [
-     {
-      test: /\.(sa|sc|c)ss$/,
-      use: [
-       'style-loader',
-       'css-loader',
-       'sass-loader',
-      ],
-     }
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      }
     ]
   }
 }

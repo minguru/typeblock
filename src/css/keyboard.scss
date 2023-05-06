@@ -2,9 +2,10 @@
 .blockKeyboard {
     display: inline-block;
     position: relative;
-    margin: 10rem -7rem 0 0;
+    margin: 10vh -7rem 0 0;
     transition: transform 100ms ease;
     text-align: initial;
+    font-size: 10px;
 
     // &.bsb { animation: shake 250ms both }
 
@@ -41,7 +42,7 @@
             user-select: none;
 
             &:nth-child(1) {
-                background: url('');
+                background: none;
                 background-color: #c28a4b;
                 transform: skewY(45deg) translateY(2.5rem);
                 left: 0;
@@ -49,7 +50,7 @@
             }
 
             &:nth-child(2) {
-                background: url('');
+                background: none;
                 background-color: rgb(139, 102, 53);
                 transform: skewY(-45deg) translateY(2.5rem);
                 right: 0;
@@ -57,7 +58,7 @@
             }
 
             &:nth-child(3) {
-                background: url('');
+                background: none;
                 text-transform: uppercase;
                 font-size: 2rem;
                 padding: 0 1rem 0 .5rem;

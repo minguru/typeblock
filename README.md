@@ -10,3 +10,14 @@ Practice your typing skill with animating ‘Block&nbsp;Keyboard’.
  + Carculate typing speed.
  + Log the all about you've typed.
  + Minecraft texture mode 📦
+
+### Preview
+[TYPEBLOCK](https://typeblock.netlify.com/)
+
+### Version
+ > 0.4.5
+
+### Patch Note
+|version|Note|Release Date|
+|---|---|---|
+|0.4.5|bla bla bla...|23.05.06|
