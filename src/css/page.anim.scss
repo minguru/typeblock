@@ -1,0 +1,181 @@
+// animations
+@keyframes shake {
+    0% {
+        transform: translateX(0%)
+    }
+
+    20% {
+        transform: translateX(-2%)
+    }
+
+    40% {
+        transform: translateX(2%)
+    }
+
+    60% {
+        transform: translateX(-1.7%)
+    }
+
+    80% {
+        transform: translateX(1.8%)
+    }
+
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes succeed {
+    0% {
+        transform: translateY(0%) scale(1) rotate(0deg)
+    }
+    20% {
+        transform: translateY(3%) scale(0.8) rotate(var(--island-rotate))
+    }
+    80% {
+        transform: translateY(-1.5%) scale(1.015)
+    }
+    100% {
+        transform: translateY(0%) scale(1) rotate(0deg)
+    }
+}
+
+@keyframes emoAnim {
+    0% {
+        filter: grayscale(0);
+        transform: skewX(0deg)
+    }
+
+    30% {
+        filter: grayscale(1)
+    }
+
+    70% {
+        filter: grayscale(1)
+    }
+
+    100% {
+        filter: grayscale(0);
+        transform: skewX(180deg)
+    }
+}
+
+@keyframes fIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fOut {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes load1 {
+    0% {
+        transform: translateY(0%)
+    }
+
+    10% {
+        transform: translateY(-20%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes load2 {
+    30% {
+        transform: translateY(0%)
+    }
+
+    40% {
+        transform: translateY(-20%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes load3 {
+    60% {
+        transform: translateY(0%)
+    }
+
+    70% {
+        transform: translateY(-20%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes shiftAct {
+    0% {
+        filter: drop-shadow(0px 0px 5px white)
+    }
+
+    20% {
+        filter: drop-shadow(0px 0px 4px white)
+    }
+
+    22% {
+        filter: drop-shadow(0px 0px 7px white)
+    }
+
+    24% {
+        filter: drop-shadow(0px 0px 4px white)
+    }
+
+    37% {
+        filter: drop-shadow(0px 0px 5px white)
+    }
+
+    38% {
+        filter: drop-shadow(0px 0px 8px white)
+    }
+
+    39% {
+        filter: drop-shadow(0px 0px 5px white)
+    }
+
+    65% {
+        filter: drop-shadow(0px 0px 6px white)
+    }
+
+    66% {
+        filter: drop-shadow(0px 0px 3px white)
+    }
+
+    67% {
+        filter: drop-shadow(0px 0px 6px white)
+    }
+
+    81% {
+        filter: drop-shadow(0px 0px 4px white)
+    }
+
+    82% {
+        filter: drop-shadow(0px 0px 8px white)
+    }
+
+    83% {
+        filter: drop-shadow(0px 0px 4px white)
+    }
+
+    100% {
+        filter: drop-shadow(0px 0px 5px white)
+    }
+}

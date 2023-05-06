@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="mingyu">
+        <meta name="keywords" content="typing practice">
+        <meta name="description" content="practice your typing...">
+        <link rel="canonical" href="https://typeprac.netlify.app/">
+
+        <!-- sns share -->
+        <meta property="og:title" content="Typing Practice">
+        <meta property="og:url" content="https://typeprac.netlify.app/">
+        <meta property="og:image" content="/src/assets/images/thumb.jpg">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="practice your typing...">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/src/assets/images/favi.ico">
+        <link rel="apple-touch-icon-precomposed" href="/src/assets/images/favi.ico">
+
+        <!-- disable auto-rotate in mobile -->
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+
+        <title>TAJA</title>
+    </head>
+
+    <body>
+        <div class="loading">
+            <div class="object">
+                <span><div></div><div></div><div></div></span>
+                <span><div></div><div></div><div></div></span>
+                <span><div></div><div></div><div></div></span>
+            </div>
+
+            <p class="text" style="font-family: 'consolas', sans-serif">l o a d i n g</p>
+        </div>
+
+        <main class="unloaded">
+            <header>
+                <h1>BlockyTypey</h1>
+
+                <button class="navham" data-active="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <nav class="">
+                <ul>
+                    <li><button>About</button></li>
+                    <li><button>Result</button></li>
+                </ul>
+
+                <div id="minecraft">
+                    <div class="mcModeButton">
+                        <div class="head">
+                            <img src="/src/assets/images/mc/spinHead.gif" alt="change texture button">
+                        </div>
+            
+                        <input type="checkbox" id="mcMode">
+                        <label for="mcMode">
+                            <div>
+                                <span></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="ui-nav-sections">
+                <section id="about" class="ham-menu">
+                    <div class="ham-menu-container">
+                        <h1>about</h1>
+                        <p>
+                            Just practice your english typing speed and accuracy something.<br>
+                            Hope you like this practice web page.<br>
+                            Thanks.
+                        </p>
+                    </div>
+                </section>
+        
+        
+                <section id="result" class="ham-menu">
+                    <div class="ham-menu-container">
+                        <h1>result</h1>
+                        <div class="result-box">
+                            <table>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="60%">
+                                </colgroup>
+                                <thead style="display: none">
+                                    <tr>
+                                        <th>attempt</th>
+                                        <th>cpm</th>
+                                        <th>wpm</th>
+                                        <th>accuracy</th>
+                                        <th>sentence</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="nottypedyet">
+                                        <td>nothing typed yet...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+            <div class="blockKeyboard">
+                <div class="key line1">
+                    <span class="a b c"><div></div><div></div><div>q</div></span>
+                    <span class="a"><div></div><div></div><div>w</div></span>
+                    <span class="a"><div></div><div></div><div>e</div></span>
+                    <span class="a"><div></div><div></div><div>r</div></span>
+                    <span class="a"><div></div><div></div><div>t</div></span>
+                    <span class="a"><div></div><div></div><div>y</div></span>
+                    <span class="a"><div></div><div></div><div>u</div></span>
+                    <span class="a"><div></div><div></div><div>i</div></span>
+                    <span class="a"><div></div><div></div><div>o</div></span>
+                    <span class="a"><div></div><div></div><div>p</div></span>
+                </div>
+            
+                <div class="key line2">
+                    <span class="a"><div></div><div></div><div>a</div></span>
+                    <span class="a"><div></div><div></div><div>s</div></span>
+                    <span class="a"><div></div><div></div><div>d</div></span>
+                    <span class="a"><div></div><div></div><div>f</div></span>
+                    <span class="a"><div></div><div></div><div>g</div></span>
+                    <span class="a"><div></div><div></div><div>h</div></span>
+                    <span class="a"><div></div><div></div><div>j</div></span>
+                    <span class="a"><div></div><div></div><div>k</div></span>
+                    <span class="a"><div></div><div></div><div>l</div></span>
+                    <span class="a nenter"><div></div><div></div><div>"<br>'</div></span>
+                    <span class="backspace"><div></div><div></div><div>backspace</div></span>
+                </div>
+            
+                <div class="key line3">
+                    <span><div></div><div></div><div>z</div></span>
+                    <span><div></div><div></div><div>x</div></span>
+                    <span><div></div><div></div><div>c</div></span>
+                    <span><div></div><div></div><div>v</div></span>
+                    <span><div></div><div></div><div>b</div></span>
+                    <span><div></div><div></div><div>n</div></span>
+                    <span><div></div><div></div><div>m</div></span>
+                    <span class="lt"><div></div><div></div><div>&lt;<br>,</div></span>
+                    <span class="gt"><div></div><div></div><div>&gt;<br>.</div></span>
+                    <span class="qm"><div></div><div></div><div>?<br>/</div></span>
+                    <span class="shift"><div></div><div></div><div><p>shift</p></div></span>
+                </div>
+            
+                <div class="spacebar">
+                    <span class="space"><div><!-- <p>This website is nothing. Just type letters into textarea box then the things will interact to your typing.</p><b>😉</b> --></div><div></div><div>space</div></span>
+                </div>    
+            </div>
+    
+            <div class="typingBox">
+                <div class="typing-info">
+                    <div class="speed">
+                        <h3>typing speed</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>CPM</td>
+                                    <td>WPM</td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ts-cpm">0</span></td>
+                                    <td><span id="ts-wpm">0</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="accr">
+                        <h3>accuracy</h3>
+                        <p><span id="t-acc">0</span></p>
+                    </div>
+                    <div class="tdone">
+                        <h3>done</h3>
+                        <p><span id="t-done">0</span></p>
+                    </div>
+                    <div class="logg">
+                        <h3>log</h3>
+                        <div class="t-logger"></div>
+                    </div>
+                </div>
+    
+                <div class="typing-area">
+                    <input type="text" id="curSen" readonly value="There is nothing more than power of the family." disabled hidden>
+                    <div id="senBox"></div>
+                    <input type="text" id="typeNow" placeholder="Type as above">
+                </div>
+            </div>
+    
+            <div class="skelly">
+                <img src="/src/assets/images/mc/skele.gif" alt="scary spinning skelly bones" title="skelly: you spin me right round baby...">
+                <p>* all copyright reserved by MINECRAFT, Mojang © 2009-2021.</p>
+            </div>    
+        </main>
+
+        <!-- 
+            <section id="{page_name}" class="ham-menu">
+                <div class="ham-menu-container">
+                    <h1>{page_name}</h1>
+                    
+                </div>
+            </section>
+        -->
+    </body>
+
+    <script src="/public/index.built.js" type="text/javascript"></script>
+</html>
