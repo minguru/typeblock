@@ -3,7 +3,7 @@
     display: inline-block;
     position: relative;
     margin: 10vh -7rem 0 0;
-    transition: transform 100ms ease;
+    transition: transform 100ms easeOutQuart;
     text-align: initial;
     font-size: 10px;
 
@@ -11,7 +11,7 @@
 
     * {
         // key pressing and blurring smoothly
-        transition: all 100ms ease;
+        transition: all 100ms easeOutQuart;
     }
 
     // block key styles

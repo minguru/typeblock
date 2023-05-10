@@ -2,10 +2,13 @@ const path = require('path')
 
 module.exports = {
   mode: 'production',
-  entry: './src/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+    old: './src/js/.old/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'index.built.js'
+    filename: '[name]_bundle.js'
   },
   performance: {
     maxEntrypointSize: 1024000,
