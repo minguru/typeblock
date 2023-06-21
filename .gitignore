@@ -3,5 +3,5 @@ node_modules
 .prettierignore
 .prettierrc
 package-lock.json
-public
+dist
 .DS_Store

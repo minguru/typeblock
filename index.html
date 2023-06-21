@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>t yp e bl o ck</title>
 </head>
 <body>
-    <a href="./old/">이전 모델</a>
-    <script src="/public/main_bundle.js"></script>
+    <!-- previous model hot key -->
+    <script type="text/javascript">
+        let arr = []
+        document.body.addEventListener("keypress", (e) => {
+            if (e.keyCode == 97) {
+                arr.push(1)
+            } else if (e.keyCode == 115 && arr.length == 1) {
+                arr.push(1)
+            } else if (e.keyCode == 100 && arr.length == 2) {
+                arr.push(1)
+            } else if (e.keyCode == 102 && arr.length == 3) {
+                arr.push(1)
+            } else {
+                arr = []
+            }
+
+            if (arr[3] == 1) {
+                window.location.href = './old/'
+                arr = []
+            }
+        })
+    </script>
+    <!-- previous model hot key end -->
+
+    <main>
+        
+    </main>
+
+    <script src="/dist/main.bundle.js"></script>
 </body>
 </html>

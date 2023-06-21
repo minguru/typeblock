@@ -7,8 +7,9 @@ module.exports = {
     old: './src/js/.old/index.js'
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: '[name]_bundle.js'
+    filename: '[name].bundle.js',
+    path: path.join(__dirname, '/dist'),
+    publicPath: '../'
   },
   performance: {
     maxEntrypointSize: 1024000,
@@ -16,14 +17,19 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, '')
+      directory: path.join(__dirname, '/')
     },
     compress: true,
-    hot: true,
-    port: 9000
+    port: 9001
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
