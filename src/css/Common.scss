@@ -1,3 +1,77 @@
+:root {
+    --u: 50px; // keyboard key unit width and height fixed value
+
+    // color setting
+    --keyColor-hue: 134; // 134
+    --keyColor-saturation: 100%; // 100%
+    --keyColor-lightness: 39%; // 39%
+
+    // background color generate
+    --background-color: hsl(
+        calc(var(--keyColor-hue) + 3),
+        calc(var(--keyColor-saturation) - 69%),
+        calc(var(--keyColor-lightness) + 20%)
+    );
+
+    // keyboard shading
+    --keyColor-main: hsl(
+        var(--keyColor-hue),
+        var(--keyColor-saturation),
+        var(--keyColor-lightness)
+    );
+    --keyColor-key-top-from: var(--keyColor-main);
+    --keyColor-key-top-to: hsl(
+        calc(var(--keyColor-hue) + 6),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 1%)
+    );
+    --keyColor-spacebar-from: hsl(
+        calc(var(--keyColor-hue) + 6),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 1%)
+    );
+    --keyColor-spacebar-to: hsl(
+        calc(var(--keyColor-hue) + 9),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 3%)
+    );
+    --keyColor-key-side-from: hsl(
+        calc(var(--keyColor-hue) + 6),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 1%)
+    );
+    --keyColor-key-side-to: hsl(
+        calc(var(--keyColor-hue) + 9),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 4%)
+    );
+    --keyColor-body-frame-border: hsl(
+        calc(var(--keyColor-hue) + 9),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 4%)
+    );
+    --keyColor-body-frame-top-from: hsl(
+        calc(var(--keyColor-hue) + 9),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 4%)
+    );
+    --keyColor-body-frame-top-to: hsl(
+        calc(var(--keyColor-hue) - 14),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 6%)
+    );
+    --keyColor-body-frame-bottom-from: hsl(
+        calc(var(--keyColor-hue) + 2),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 1%)
+    );
+    --keyColor-body-frame-bottom-to: hsl(
+        calc(var(--keyColor-hue) + 9),
+        var(--keyColor-saturation),
+        calc(var(--keyColor-lightness) - 4%)
+    );
+}
+
 * {
     margin: 0;
     padding: 0;

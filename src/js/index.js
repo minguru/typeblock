@@ -3,4 +3,4 @@
 import '../css/Common.scss'
 import '../css/Main.scss'
 
-import './keyBoard'
+import './kbFunc'

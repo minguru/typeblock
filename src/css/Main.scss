@@ -1,7 +1,7 @@
 main {
     width: 100%;
     height: 100%;
-    background-color: #76b788;
+    background-color: var(--background-color);
     position: relative;
     overflow: hidden;
 }
@@ -25,30 +25,48 @@ keyboard {
         content: '';
         width: 100%;
         height: 38px;
-        background-color: #00b144;
+        border-top: 4px solid var(--keyColor-body-frame-border);
+        background: linear-gradient(to bottom, var(--keyColor-body-frame-bottom-from) 0%, var(--keyColor-body-frame-bottom-to) 50%);
         border-bottom-left-radius: 7px;
         border-bottom-right-radius: 7px;
+        position: relative;
+        z-index: 5;
+    }
+
+    &::before {
+        // keyboard background
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background: repeating-linear-gradient(var(--keyColor-body-frame-top-from), var(--keyColor-body-frame-top-to) var(--u));
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
 
     // rows
     .R4 {
-
+        z-index: 1;
     }
 
     .R3 {
-
+        z-index: 2;
     }
 
     .R2 {
-
+        z-index: 3;
     }
 
     .R1 {
-
+        z-index: 4;
     }
 
     .bR1 {
-        
+        z-index: 5;
     }
     // rows end
 
@@ -57,8 +75,10 @@ keyboard {
         display: inline-block;
         --u: 50px;
         height: 50px;
-        background: radial-gradient(#00c340 60%, #00b144 100%);
+        background: radial-gradient(var(--keyColor-key-side-from) 60%, var(--keyColor-key-side-to) 100%);
         position: relative;
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
         &::after {
             display: block;
             content: '';
@@ -66,8 +86,9 @@ keyboard {
             left: 5px; top: 2px;
             width: calc(100% - 10px);
             height: calc(100% - 10px);
-            background: linear-gradient(to bottom, #00c730 0%, #00c340 100%);
+            background: linear-gradient(to bottom, var(--keyColor-key-top-from) 0%, var(--keyColor-key-top-to));
             border-radius: 12px 12px 14px 14px;
+            transition: filter 300ms ease;
         }
 
         &.u1 {
@@ -88,7 +109,20 @@ keyboard {
 
         &.u5 {
             width: calc(var(--u) * 5);
-            background: radial-gradient(#00c340 70%, #00b144 100%);
+            background: radial-gradient(var(--keyColor-spacebar-from) 70%, var(--keyColor-spacebar-to) 100%);
+            border-top-left-radius: 15%;
+            border-top-right-radius: 15%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            &::after {
+                filter: contrast(1.075);
+            }
+        }
+
+        &.p {
+            transform: translateY(11px);
         }
     }
 }
