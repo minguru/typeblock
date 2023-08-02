@@ -1,4 +1,4 @@
-// Keyboard generation
+// Keyboard generate scripts
 
 const kbLayout = {
     R4: [

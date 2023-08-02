@@ -1,3 +1,5 @@
+// keyboard reacting function scripts
+
 const { $keyboard, $main, kbLayout } = require('./kbGen')
 
 function keyPress(e, t) {

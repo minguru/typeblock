@@ -1,6 +1,8 @@
 :root {
     --u: 50px; // keyboard key unit width and height fixed value
 
+    --keyboard-width: 725px;
+
     // color setting
     --keyColor-hue: 134; // 134
     --keyColor-saturation: 100%; // 100%
@@ -90,4 +92,5 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: var(--background-color);
 }
