@@ -13,14 +13,17 @@ keyboard {
     position: relative;
     margin: 0 auto;
 
-    overflow: hidden;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+
+    box-sizing: content-box;
+    border: 3px solid var(--keyColor-main);
+    border-bottom: none;
 
     &::after {
         display: block;
         content: '';
-        width: 100%;
+        min-width: 100.72%;
         height: 38px;
         border-top: 4px solid var(--keyColor-body-frame-border);
         background: linear-gradient(to bottom, var(--keyColor-body-frame-bottom-from) 0%, var(--keyColor-body-frame-bottom-to) 50%);
@@ -28,6 +31,8 @@ keyboard {
         border-bottom-right-radius: 7px;
         position: relative;
         z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &::before {
@@ -80,12 +85,12 @@ keyboard {
             display: block;
             content: '';
             position:absolute;
-            left: 5px; top: 2px;
+            left: 5px;
+            top: 2px;
             width: calc(100% - 10px);
             height: calc(100% - 10px);
             background: linear-gradient(to bottom, var(--keyColor-key-top-from) 0%, var(--keyColor-key-top-to));
             border-radius: 12px 12px 14px 14px;
-            transition: filter 300ms ease;
         }
 
         &.u1 {
@@ -114,7 +119,13 @@ keyboard {
         &:hover {
             cursor: pointer;
             &::after {
-                filter: contrast(1.075);
+                filter: contrast(1.05);
+            }
+        }
+
+        &:active {
+            &::after {
+                filter: contrast(1);
             }
         }
 
