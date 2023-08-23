@@ -132,6 +132,12 @@ keyboard {
         &.p {
             transform: translateY(11px);
         }
+
+        &[data-keydata="capslock"] {
+            &.active {
+                transform: translateY(11px) !important;
+            }
+        }
     }
 }
 
