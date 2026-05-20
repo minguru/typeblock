@@ -72,14 +72,14 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     // image pre-loading
     let images = [
-        '/src/assets/images/error.svg',
-        '/src/assets/images/mc/grss_b.png',
-        '/src/assets/images/mc/grss_s.png',
-        '/src/assets/images/mc/grss_t.png',
-        '/src/assets/images/mc/skele.gif',
-        '/src/assets/images/mc/snd.jpg',
-        '/src/assets/images/mc/spinHead.gif',
-        '/src/assets/images/mc/wtr.gif'
+        '../../../assets/images/error.svg',
+        '../../../assets/images/mc/grss_b.png',
+        '../../../assets/images/mc/grss_s.png',
+        '../../../assets/images/mc/grss_t.png',
+        '../../../assets/images/mc/skele.gif',
+        '../../../assets/images/mc/snd.jpg',
+        '../../../assets/images/mc/spinHead.gif',
+        '../../../assets/images/mc/wtr.gif'
     ]
     for (let i = 0; i < images.length; i++) {
         let img = new Image()

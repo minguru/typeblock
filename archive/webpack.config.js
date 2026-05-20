@@ -1,16 +1,7 @@
 const path = require('path')
 
-module.exports = {
+const common = {
   mode: 'production',
-  entry: {
-    main: './src/js/index.js',
-    old: './src/js/.old/index.js'
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.join(__dirname, '/dist'),
-    publicPath: '../'
-  },
   performance: {
     maxEntrypointSize: 1024000,
     maxAssetSize: 1024000
@@ -41,3 +32,26 @@ module.exports = {
     ]
   }
 }
+
+module.exports = [
+  {
+    // for main
+    ...common,
+    entry: './src/js/index.js',
+    output: {
+      filename: 'main.bundle.js',
+      path: path.join(__dirname, '/dist'),
+      publicPath: '../'
+    }
+  },
+  {
+    // for old
+    ...common,
+    entry: './src/js/.old/index.js',
+    output: {
+      filename: 'old.bundle.js',
+      path: path.join(__dirname, '/dist'),
+      publicPath: '../dist/'
+    }
+  }
+]

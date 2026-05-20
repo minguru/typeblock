@@ -1,0 +1,189 @@
+#freakinkeyboard {
+  --u: 50px; // key unit
+  
+  --keyboard-color-hue: 134;
+  --keyboard-color-saturation: 100%;
+  --keyboard-color-lightness: 39%;
+  --keyboard-color: hsl(
+    var(--keyboard-color-hue),
+    var(--keyboard-color-saturation),
+    var(--keyboard-color-lightness)
+  );
+
+  --keyboard-frame-color: var(--keyboard-color);
+
+  --keyboard-body-from: hsl(
+    calc(var(--keyboard-color-hue) + 9),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 4%)
+  );
+  --keyboard-body-to: hsl(
+    calc(var(--keyboard-color-hue) - 14),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 3%)
+  );
+
+  --keyboard-bottom-from: hsl(
+    calc(var(--keyboard-color-hue) + 2),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 0.33%)
+  );
+  --keyboard-bottom-to: hsl(
+    calc(var(--keyboard-color-hue) + 9),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 4%)
+  );
+
+  --keyboard-key-side-from: hsl(
+    calc(var(--keyboard-color-hue) + 6),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 1.75%)
+  );
+  --keyboard-key-side-to: hsl(
+    calc(var(--keyboard-color-hue) + 9),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 4%)
+  );
+
+  --keyboard-key-top-from: var(--keyboard-color);
+  --keyboard-key-top-to: hsl(
+    calc(var(--keyboard-color-hue) + 6),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 1%)
+  );
+
+  --keyboard-key-spacebar-from: hsl(
+    calc(var(--keyboard-color-hue) + 6),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 1%)
+  );
+  --keyboard-key-spacebar-to: hsl(
+    calc(var(--keyboard-color-hue) + 9),
+    var(--keyboard-color-saturation),
+    calc(var(--keyboard-color-lightness) - 3%)
+  );
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  position: relative;
+  margin: 0 auto;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-sizing: content-box;
+  border: 3px solid var(--keyboard-frame-color);
+  border-bottom: none;
+  background: repeating-linear-gradient(var(--keyboard-body-from), var(--keyboard-body-to) var(--u));
+
+  &::before {
+    // keyboard background
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    padding-top: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    min-width: 100.72%;
+    height: 42px;
+    border-top: 4px solid var(--keyboard-frame-color);
+    background: linear-gradient(to bottom, var(--keyboard-bottom-from) 0%, var(--keyboard-bottom-to) 50%);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    position: relative;
+    top: -2px;
+    z-index: 5;
+  }
+
+  // rows
+  .R4 { z-index: 1; }
+  .R3 { z-index: 2; }
+  .R2 { z-index: 3; }
+  .R1 { z-index: 4; }
+  .bR1 { z-index: 5; }
+  >div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2px;
+  }
+  // rows end
+
+  // key
+  >div>span {
+    height: var(--u);
+    background: radial-gradient(var(--keyboard-key-side-from) 60%, var(--keyboard-key-side-to) 100%);
+    position: relative;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    &::after {
+      display: block;
+      content: '';
+      position:absolute;
+      left: 5px;
+      top: 2px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      background: linear-gradient(to bottom, var(--keyboard-key-top-from) 0%, var(--keyboard-key-top-to));
+      border-radius: 12px 12px 14px 14px;
+    }
+
+    &.u1 {
+      width: var(--u);
+    }
+
+    &.u1h {
+      width: calc(var(--u) * 1.5);
+    }
+
+    &.u1tq {
+      width: calc(var(--u) * 1.75);
+    }
+
+    &.u2q {
+      width: calc(var(--u) * 2.25);
+    }
+
+    &.u5 {
+      width: calc(var(--u) * 5);
+      background: radial-gradient(var(--keyboard-key-spacebar-from) 70%, var(--keyboard-key-spacebar-to) 100%);
+      border-top-left-radius: 15%;
+      border-top-right-radius: 15%;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::after {
+        filter: contrast(1.05);
+      }
+    }
+
+    &:active {
+      &::after {
+        filter: contrast(1);
+      }
+    }
+
+    &.p {
+      transform: translateY(11px);
+    }
+
+    &[data-keydata="capslock"] {
+      &.active {
+        transform: translateY(11px) !important;
+      }
+    }
+  }
+}
