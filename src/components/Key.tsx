@@ -1,18 +1,5 @@
+import KeyboardLayoutData from "@/constants/KeyboardLayoutData";
 import { useState, useEffect } from "react";
-
-interface KeyData {
-  data: string,
-  unit: string,
-  code: string
-}
-
-interface KeyboardLayoutData {
-  R4: KeyData[],
-  R3: KeyData[],
-  R2: KeyData[],
-  R1: KeyData[],
-  bR1: KeyData[]
-}
 
 interface Props {
   layoutData: KeyboardLayoutData
@@ -23,7 +10,7 @@ function Key({ layoutData }: Props) {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      setPressedKeys(prev => new Set(prev).add(e.code));
+      setPressedKeys(prev => new Set(prev).add(e.code)); // 동시입력 지원
     };
     const handleKeyUp = (e: KeyboardEvent) => {
       setPressedKeys(prev => {
@@ -53,8 +40,10 @@ function Key({ layoutData }: Props) {
               <span 
                 key={key.code} 
                 className={`${key.unit} ${pressedKeys.has(key.code) ? 'p' : ''}`} 
-                onMouseDown={(e) => {(e.target as HTMLElement).classList.add('p');}} 
-                onMouseUp={(e) => (e.target as HTMLElement).classList.remove('p')}>  </span>
+                onMouseDown={(e) => {(e.target as HTMLElement).classList.add('p')}} 
+                onMouseUp={(e) => (e.target as HTMLElement).classList.remove('p')}>
+                <em>{key.text?.map((text, i) => (<>{i < key.text!.length - 1 ? text : ` ${text}`}{i < key.text!.length - 1 && <br />}</>))}</em>
+              </span>
             ))}
           </div>
         ))

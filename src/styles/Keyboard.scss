@@ -1,75 +1,10 @@
 #freakinkeyboard {
-  --u: 50px; // key unit
-  
-  --keyboard-color-hue: 134;
-  --keyboard-color-saturation: 100%;
-  --keyboard-color-lightness: 39%;
-  --keyboard-color: hsl(
-    var(--keyboard-color-hue),
-    var(--keyboard-color-saturation),
-    var(--keyboard-color-lightness)
-  );
-
-  --keyboard-frame-color: var(--keyboard-color);
-
-  --keyboard-body-from: hsl(
-    calc(var(--keyboard-color-hue) + 9),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 4%)
-  );
-  --keyboard-body-to: hsl(
-    calc(var(--keyboard-color-hue) - 14),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 3%)
-  );
-
-  --keyboard-bottom-from: hsl(
-    calc(var(--keyboard-color-hue) + 2),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 0.33%)
-  );
-  --keyboard-bottom-to: hsl(
-    calc(var(--keyboard-color-hue) + 9),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 4%)
-  );
-
-  --keyboard-key-side-from: hsl(
-    calc(var(--keyboard-color-hue) + 6),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 1.75%)
-  );
-  --keyboard-key-side-to: hsl(
-    calc(var(--keyboard-color-hue) + 9),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 4%)
-  );
-
-  --keyboard-key-top-from: var(--keyboard-color);
-  --keyboard-key-top-to: hsl(
-    calc(var(--keyboard-color-hue) + 6),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 1%)
-  );
-
-  --keyboard-key-spacebar-from: hsl(
-    calc(var(--keyboard-color-hue) + 6),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 1%)
-  );
-  --keyboard-key-spacebar-to: hsl(
-    calc(var(--keyboard-color-hue) + 9),
-    var(--keyboard-color-saturation),
-    calc(var(--keyboard-color-lightness) - 3%)
-  );
-
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: auto;
   position: relative;
-  margin: 0 auto;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   box-sizing: content-box;
@@ -138,6 +73,23 @@
       height: calc(100% - 10px);
       background: linear-gradient(to bottom, var(--keyboard-key-top-from) 0%, var(--keyboard-key-top-to));
       border-radius: 12px 12px 14px 14px;
+    }
+
+    em { // engraving
+      position: relative;
+      z-index: 1;
+      left: 9px;
+      top: 3px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 0.5;
+      color: var(--keyboard-key-engrave-up);
+      transition: color 500ms ease;
+      user-select: none;
+    }
+    &.p em {
+      color: var(--keyboard-key-engrave-down);
+      transition: none; // for sexy fade effect
     }
 
     &.u1 {

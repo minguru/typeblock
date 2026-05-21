@@ -1,0 +1,49 @@
+#typingbox {
+  margin-block-start: 25px;
+  border-radius: 8px;
+  background-color: hsl(
+    calc(var(--background-color-hue)),
+    calc(var(--background-color-saturation) - 22%),
+    calc(var(--background-color-lightness) + 2%)
+  );
+  padding: 15px 20px;
+
+  .text-box {
+    p.sentence {
+      font-size: 16px;
+      line-height: 1.1;
+    }
+  }
+
+  .typing-area {
+    width: 100%;
+    height: 18px;
+    margin-block-start: 6px;
+    border-bottom: 2px solid #36383f30;
+    transition-property: border-bottom;
+    transition-duration: 333ms;
+    transition-timing-function: ease;
+    &:hover {
+      cursor: text;
+      border-bottom: 2px solid #26282f70;
+    }
+
+    .cursor {
+      width: 3px; 
+      height: 100%;
+      background-color: #333;
+      @keyframes cursor-blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      animation: cursor-blink 500ms infinite;
+    }
+  }
+}
