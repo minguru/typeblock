@@ -1,14 +1,15 @@
-import '@/styles/Common.scss';
-import '@/styles/App.scss';
+import '@/styles/Common.scss'
+import '@/styles/App.scss'
 
-import Keyboard from '@/views/Keyboard';
-import TypingBox from '@/views/TypingBox';
+import Keyboard from '@/components/ui/Keyboard'
+import TypingBox from '@/components/ui/TypingBox'
+import { useKeyPress } from '@/hooks/useKeyPress'
 
-function App() {
+export default function App () {
+  const { pressedKeys, typedText } = useKeyPress()
+
   return <div id="App">
-    <Keyboard/>
-    <TypingBox/>
+    <Keyboard pressedKeys={pressedKeys} />
+    <TypingBox typedText={typedText}/>
   </div>
 }
-
-export default App;

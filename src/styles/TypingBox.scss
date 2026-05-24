@@ -32,6 +32,7 @@
       width: 3px; 
       height: 100%;
       background-color: #333;
+      display: inline-block;
       @keyframes cursor-blink {
         0% {
           opacity: 0;

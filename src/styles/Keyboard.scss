@@ -86,6 +86,7 @@
       color: var(--keyboard-key-engrave-up);
       transition: color 500ms ease;
       user-select: none;
+      pointer-events: none; // required for setting target accurate from click event
     }
     &.p em {
       color: var(--keyboard-key-engrave-down);
